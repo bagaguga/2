@@ -1,19 +1,20 @@
 // import './App.css';
 import { NavLink, Routes, Route } from "react-router-dom";
+import Profile from "./Profile";
 
 
-const Profile = ()=>{
-  return (
-    <h1>Это страница с профилем</h1>
-  )
-}
+
 const Messages = () => {
 	return <h1>Это страница с сообщениями</h1>;
 };
 
-function App() {
-  return (
-		<div className="container-fluid">
+
+
+
+function App(props) {
+  // console.log(props);
+	return (
+		<div className="container-fluid mt-5">
 			<div className="row">
 				<div className="col-sm-3">
 					<div className="nav flex-column nav-pills" aria-orientation="vertical">
@@ -33,7 +34,7 @@ function App() {
 				</div>
 				<div className="col-sm-9">
 					<Routes>
-						<Route path="/profile" element={<Profile />} />
+						<Route path="/profile" element={<Profile function={props.function}/>} />
 						<Route path="/messages" element={<Messages />} />
 					</Routes>
 				</div>
