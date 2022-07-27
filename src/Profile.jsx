@@ -1,8 +1,9 @@
 import styles from "./Profile.module.css";
 
 const Profile = (props) => {
-	let user = props.function();
-	// console.log(user);
+	let userId = window.location.pathname.split("/")[2];
+	let user = props.function(userId);
+	//console.log(user);
 	return (
 		<div className="row">
 			<div className="col-md-3">
@@ -14,9 +15,9 @@ const Profile = (props) => {
 				</h2>
 				<p className={styles.about}>{user.about}</p>
 				<p className={styles.user}>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis sit a fugit pariatur,
-					reiciendis repudiandae dolore error recusandae incidunt modi, nostrum, quisquam
-					perspiciatis quos. Quis numquam modi dignissimos aliquam reprehenderit.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quaerat mollitia est? Eum
+					accusantium ad sed iure doloribus voluptatibus! Quam blanditiis architecto autem corrupti
+					deleniti culpa explicabo minus, laboriosam hic!
 				</p>
 			</div>
 		</div>
